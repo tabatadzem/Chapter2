@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-
+import java.text.DecimalFormat;
 public class Chapter2 {
     public static void main (String[] args){
 //        Scanner input = new Scanner(System.in);
@@ -27,27 +27,41 @@ public class Chapter2 {
 //        System.out.println(Math.pow((Math.pow(b,2) - 4* a * c),0.5));
 
 
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Please enter the amount ");
+//        double amount = input.nextDouble();
+//        int remainingAmount = (int)(amount * 100);
+//        int numberOfOneDollars = remainingAmount / 100;
+//        remainingAmount = remainingAmount % 100;
+//        int numberOfQuarters = remainingAmount / 25;
+//        remainingAmount = remainingAmount % 25;
+//        int numberOfDimes = remainingAmount / 10;
+//        remainingAmount = remainingAmount % 10;
+//        int numberOfNickles = remainingAmount / 5;
+//        remainingAmount = remainingAmount % 5;
+//        int numberOfPennies = remainingAmount;
+//
+//        System.out.println(" your amount is ");
+//        System.out.println(" " + numberOfOneDollars + " dollars" );
+//        System.out.println(" " + numberOfQuarters + " Quarters" );
+//        System.out.println(" " + numberOfDimes + " Dimes" );
+//        System.out.println(" " + numberOfNickles + " Nickles" );
+//        System.out.println(" " + numberOfPennies + " pennies");
+
+//
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("please enter the degree in celsius");
+//        double degreeCelsius = input.nextDouble();
+//        double fahrenheit = 9.0 / 5 * degreeCelsius +32;
+//        System.out.println(" "+ degreeCelsius + " is " + fahrenheit + " fahrenheit" );
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the amount ");
-        double amount = input.nextDouble();
-        int remainingAmount = (int)(amount * 100);
-        int numberOfOneDollars = remainingAmount / 100;
-        remainingAmount = remainingAmount % 100;
-        int numberOfQuarters = remainingAmount / 25;
-        remainingAmount = remainingAmount % 25;
-        int numberOfDimes = remainingAmount / 10;
-        remainingAmount = remainingAmount % 10;
-        int numberOfNickles = remainingAmount / 5;
-        remainingAmount = remainingAmount % 5;
-        int numberOfPennies = remainingAmount;
-
-        System.out.println(" your amount is ");
-        System.out.println(" " + numberOfOneDollars + " dollars" );
-        System.out.println(" " + numberOfQuarters + " Quarters" );
-        System.out.println(" " + numberOfDimes + " Dimes" );
-        System.out.println(" " + numberOfNickles + " Nickles" );
-        System.out.println(" " + numberOfPennies + " pennies");
-
+        System.out.print("please the radius and length");
+        double radius = input.nextDouble();
+        double length = input.nextDouble();
+        Cylinder cylinder = new Cylinder(radius,length);
+        cylinder.getVolume();
+        DecimalFormat df = new DecimalFormat("####0.000");
+        System.out.print("the volume of cylinder with the radius " + radius + " and the length " + length + " is " + df.format(cylinder.getVolume()));
 
 
     }
