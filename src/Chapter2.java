@@ -85,13 +85,27 @@ public class Chapter2 {
 //         Digit number = new Digit(digit);
 //         System.out.println(number.getSum());
 
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("please enter the minutes");
+//         long minutes = input.nextLong();
+//         long minutesInDay = 24 * 60;
+//         long minutesInYear = 365 * minutesInDay;
+//         long year = minutes / minutesInYear;
+//         long day = minutes%minutesInYear/minutesInDay;
+//         System.out.println("it is "+ year + " and " + day);
          Scanner input = new Scanner(System.in);
-         System.out.print("please enter the minutes");
-         long minutes = input.nextLong();
-         long minutesInDay = 24 * 60;
-         long minutesInYear = 365 * minutesInDay;
-         long year = minutes / minutesInYear;
-         long day = minutes%minutesInYear/minutesInDay;
-         System.out.println("it is "+ year + " and " + day);
+         System.out.println(" please enter the time zone");
+         int timeZone = input.nextInt();
+         long totalMilliSeconds = System.currentTimeMillis();
+         long totalSeconds = totalMilliSeconds/1000;
+         long currentSecond = totalMilliSeconds%60;
+         long totalMinutes = totalSeconds/60;
+         long currentMinute = totalMinutes%60;
+         long totalHours = totalMinutes/60;
+         long currentHour = totalHours%24;
+         System.out.print("it is " + (currentHour + timeZone) + ":" + currentMinute + ":" + currentSecond);
+
+
+
     }
 }
