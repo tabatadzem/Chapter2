@@ -54,15 +54,35 @@ public class Chapter2 {
 //        double degreeCelsius = input.nextDouble();
 //        double fahrenheit = 9.0 / 5 * degreeCelsius +32;
 //        System.out.println(" "+ degreeCelsius + " is " + fahrenheit + " fahrenheit" );
-        Scanner input = new Scanner(System.in);
-        System.out.print("please the radius and length");
-        double radius = input.nextDouble();
-        double length = input.nextDouble();
-        Cylinder cylinder = new Cylinder(radius,length);
-        cylinder.getVolume();
-        DecimalFormat df = new DecimalFormat("####0.000");
-        System.out.print("the volume of cylinder with the radius " + radius + " and the length " + length + " is " + df.format(cylinder.getVolume()));
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("please the radius and length");
+//        double radius = input.nextDouble();
+//        double length = input.nextDouble();
+//        Cylinder cylinder = new Cylinder(radius,length);
+//        cylinder.getVolume();
+//        DecimalFormat df = new DecimalFormat("####0.000");
+//        System.out.print("the volume of cylinder with the radius " + radius + " and the length " + length + " is " + df.format(cylinder.getVolume()));
+//
 
 
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter the distance into feet");
+//        double feet = input.nextDouble();
+//        double meters = feet * 0.305;
+//        DecimalFormat df = new DecimalFormat("####0.000");
+//        System.out.println("" + feet + " is " + df.format(meters));
+
+//         Scanner input = new Scanner(System.in);
+//         System.out.println("please enter the pounds");
+//         double pound = input.nextDouble();
+//         double kg = pound*0.454;
+//         DecimalFormat df = new DecimalFormat("####0.000");
+//         System.out.print( + pound + " is " + df.format(kg));
+
+         Scanner input = new Scanner(System.in);
+         System.out.println(" please enter the number from 0 to 1000: ");
+         int digit = input.nextInt();
+         Digit number = new Digit(digit);
+         System.out.println(number.getSum());
     }
 }
