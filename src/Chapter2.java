@@ -79,10 +79,19 @@ public class Chapter2 {
 //         DecimalFormat df = new DecimalFormat("####0.000");
 //         System.out.print( + pound + " is " + df.format(kg));
 
+//         Scanner input = new Scanner(System.in);
+//         System.out.println(" please enter the number from 0 to 1000: ");
+//         int digit = input.nextInt();
+//         Digit number = new Digit(digit);
+//         System.out.println(number.getSum());
+
          Scanner input = new Scanner(System.in);
-         System.out.println(" please enter the number from 0 to 1000: ");
-         int digit = input.nextInt();
-         Digit number = new Digit(digit);
-         System.out.println(number.getSum());
+         System.out.print("please enter the minutes");
+         long minutes = input.nextLong();
+         long minutesInDay = 24 * 60;
+         long minutesInYear = 365 * minutesInDay;
+         long year = minutes / minutesInYear;
+         long day = minutes%minutesInYear/minutesInDay;
+         System.out.println("it is "+ year + " and " + day);
     }
 }
